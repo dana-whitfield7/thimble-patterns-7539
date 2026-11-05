@@ -1,0 +1,37 @@
+name: Bug report
+description: Tell us about a pattern that prints or scales wrongly.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a problem with a Thimble pattern.
+        Please check the open issues first in case it is already known.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what did you get instead?
+      placeholder: The sleeve piece comes out shorter than the size chart says.
+    validations:
+      required: true
+  - type: dropdown
+    id: pattern-size
+    attributes:
+      label: Pattern size
+      description: Which size were you printing?
+      options:
+        - S
+        - M
+        - L
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Which release of the patterns are you using?
+      placeholder: "1.2.0"
+    validations:
+      required: false
